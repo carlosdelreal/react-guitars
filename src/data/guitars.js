@@ -1,6 +1,6 @@
 const guitars = {
 	"guitar1": {
-		"id": "classical",
+		"id": "1",
 		"name": "Classical Guitar",
 		"year": "1750",
 		"price": 1724,
@@ -13,11 +13,11 @@ const guitars = {
 		"neck": "Mahogany or Cedar",
 		"fretboard": "Ebony or Rosewood",
 		"description": "The nylon-string is a type of accoustic guitar particularly used in classical music, flamenco, traditional latin folk music, and jazz. It's also been used more recently in pop music for its warm and mellow sound. ",
-		"image": "guitar-1.jpg"
+		"image": "/static/media/images/guitar-1.jpg"
 	},
 
 	"guitar2": {
-		"id": "accoustic",
+		"id": "2",
 		"name": "Accoustic Flat Top",
 		"year": "1916",
 		"price": 1724,
@@ -33,7 +33,7 @@ const guitars = {
 	},
 
 	"guitar3": {
-		"id": "archtop",
+		"id": "3",
 		"name": "Archtop Electric",
 		"year": "1936",
 		"price": 1724,
@@ -49,7 +49,7 @@ const guitars = {
 	},
 
 	"guitar4": {
-		"id": "stratocaster",
+		"id": "4",
 		"name": "Fender Stratocaster",
 		"year": "1954",
 		"price": 1724,
@@ -65,7 +65,7 @@ const guitars = {
 	},
 
 	"guitar5": {
-		"id": "telecaster",
+		"id": "5",
 		"name": "Fender Telecaster",
 		"year": "1950",
 		"price": 1724,
@@ -81,7 +81,7 @@ const guitars = {
 	},
 
 	"guitar6": {
-		"id": "les-paul",
+		"id": "6",
 		"name": "Gibson Les Paul",
 		"year": "1952",
 		"price": 1724,
@@ -97,7 +97,7 @@ const guitars = {
 	},
 
 	"guitar7": {
-		"id": "sg",
+		"id": "7",
 		"name": "Gibson SG",
 		"year": "1961",
 		"price": 1724,
@@ -113,7 +113,7 @@ const guitars = {
 	},
 
 	"guitar8": {
-		"id": "custom",
+		"id": "8",
 		"name": "Custom Electric",
 		"year": "1980s",
 		"price": 1724,

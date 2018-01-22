@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './components/Header';
 import Order from './components/Order';
 import Inventory from './components/Inventory';
+import Guitar from "./components/Guitar";
 import guitars from "./data/guitars";
 
 class App extends Component {
@@ -36,18 +37,23 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App wrapper">
-				<Header tagline="Welcome!"/>
-				<div className="guitar-selection column-4">
-					((((guitars will go here...))))
+				<div className="row">
+					<Header />
+					<div className="guitar-selection column-4">
+						<h2>Items</h2>
+						<ul className="guitars-list">
+							{
+								Object.keys(this.state.guitars).map(key => <Guitar key={key} details={this.state.guitars[key]} />)
+							}
+						</ul>
+					</div>
+					<div className="column-4">
+						<Order />
+					</div>
+					<div className="column-4">
+						<Inventory addGuitar={this.addGuitar} loadSamples={this.loadSamples} />
+					</div>
 				</div>
-				<div className="column-4">
-					<Order />
-				</div>
-				<div className="column-4">
-					<Inventory addGuitar={this.addGuitar} loadSamples={this.loadSamples} />
-				</div>
-
-
 			</div>
 		);
 	}

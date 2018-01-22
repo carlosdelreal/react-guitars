@@ -2,17 +2,25 @@ import React, { Component } from 'react';
 import Header from './components/Header';
 import Order from './components/Order';
 import Inventory from './components/Inventory';
+import guitars from "./data/guitars";
 
 class App extends Component {
 
 	constructor() {
 		super();
 		this.addGuitar = this.addGuitar.bind(this);
+		this.loadSamples = this.loadSamples.bind(this);
 		// getInitialState
 		this.state = {
 			guitars: {},
 			order: {}
 		};
+	}
+
+	loadSamples() {
+		this.setState({
+			guitars
+		});
 	}
 
 	addGuitar(guitar) {
@@ -27,13 +35,19 @@ class App extends Component {
 
 	render() {
 		return (
-			<div className="App">
+			<div className="App wrapper">
 				<Header tagline="Welcome!"/>
-				<div className="guitar-selection">
+				<div className="guitar-selection column-4">
 					((((guitars will go here...))))
 				</div>
-				<Order />
-				<Inventory addGuitar={this.addGuitar} />
+				<div className="column-4">
+					<Order />
+				</div>
+				<div className="column-4">
+					<Inventory addGuitar={this.addGuitar} loadSamples={this.loadSamples} />
+				</div>
+
+
 			</div>
 		);
 	}

@@ -1,8 +1,10 @@
 @import 'base/variables';
+@import 'base/mixins';
+@import 'base/grid';
 @import 'base/global';
-@import 'components/store-selector';
-@import 'components/guitar-edit';
-@import 'components/btn';
+@import 'modules/store-selector';
+@import 'modules/guitar-edit';
+@import 'modules/btn';
 
 .App {
   text-align: center;

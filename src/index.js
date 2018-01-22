@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
 
-import './css/App.css';
+import './App.css';
 import App from './App';
 import StorePicker from './components/StorePicker';
 import NotFound from './components/NotFound';

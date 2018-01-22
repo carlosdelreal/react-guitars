@@ -7,12 +7,24 @@ class App extends Component {
 
 	constructor() {
 		super();
+		this.addGuitar = this.addGuitar.bind(this);
 		// getInitialState
 		this.state = {
 			guitars: {},
 			order: {}
 		};
 	}
+
+	addGuitar(guitar) {
+		// get a copy of your current state
+		const guitars = {...this.state.guitars};
+		// add in our new guitar
+		const timestamp = Date.now();
+		guitars[`guitar-${timestamp}`] = guitar;
+		// set state
+		this.setState({ guitars });
+	}
+
 	render() {
 		return (
 			<div className="App">
@@ -21,7 +33,7 @@ class App extends Component {
 					((((guitars will go here...))))
 				</div>
 				<Order />
-				<Inventory />
+				<Inventory addGuitar={this.addGuitar} />
 			</div>
 		);
 	}

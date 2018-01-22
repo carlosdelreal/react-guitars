@@ -12,11 +12,13 @@ class AddGuitarForm extends React.Component {
 			image: this.image.value
 		};
 		console.log(guitar);
+		this.props.addGuitar(guitar);
+		this.guitarForm.reset();
 	}
 
 	render() {
 		return (
-			<form className="guitar-edit" onSubmit={(e) => this.createGuitar(e)}>
+			<form ref={(input) => this.guitarForm = input } className="guitar-edit" onSubmit={(e) => this.createGuitar(e)}>
 				<input ref={(input) => this.name = input } type="text" placeholder="Guitar Name"/>
 				<input ref={(input) => this.price = input } type="text" placeholder="Guitar Price"/>
 				<select ref={(input) => this.status = input }>

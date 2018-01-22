@@ -1,0 +1,38 @@
+body {
+	color: $fontColor;
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+header {
+	text-align: center;
+}
+
+button,
+input[type=submit] {
+	text-transform: uppercase;
+	background: none;
+	border: 1px solid black;
+	font-weight: 600;
+	font-size: 1.5rem;
+	font-family: sans-serif;
+	transition: all 0.2s;
+	position: relative;
+	z-index: 2;
+	&[disabled] {
+		color: red;
+		background: white;
+		border-color: red;
+		transform: rotate(-10deg) scale(2) translateX(50%) translateY(-50%);
+	}
+}
+
+h1 {
+	font-size: 4rem;
+	font-family: 'Copperplate', sans-serif;
+	font-weight: normal;
+	text-align: center;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 0 #eeeedd, 2px 2px 0 #cacaca;
+}

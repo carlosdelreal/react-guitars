@@ -13,7 +13,7 @@ class StorePicker extends React.Component {
 			<div>
 				<Header />
 				<div className="store-selector">
-					<a href="/guitars" className="store-selector__btn" >Visit Store →</a>
+					<a href="/guitars" className="btn" >Visit Store →</a>
 				</div>
 			</div>
 		)

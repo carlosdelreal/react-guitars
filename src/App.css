@@ -45,26 +45,6 @@ h1 {
     .store-selector button[type="text"] {
       text-align: center;
       font-size: 2rem; }
-  .store-selector__btn {
-    color: #353535;
-    display: inline-block;
-    text-align: center;
-    text-transform: uppercase;
-    background: none;
-    border: 1px solid black;
-    font-weight: 600;
-    font-size: 1.5rem;
-    font-family: sans-serif;
-    -webkit-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    transition: all 0.2s;
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    text-decoration: none; }
-    .store-selector__btn:hover {
-      background: #353535;
-      color: white; }
 
 .guitar-edit {
   max-width: 500px;
@@ -88,6 +68,27 @@ h1 {
     background: #fff; }
   .guitar-edit select {
     height: 50px; }
+
+.btn {
+  color: #353535;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  background: none;
+  border: 1px solid black;
+  font-weight: 600;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  text-decoration: none; }
+  .btn:hover {
+    background: #353535;
+    color: white; }
 
 .App {
   text-align: center; }

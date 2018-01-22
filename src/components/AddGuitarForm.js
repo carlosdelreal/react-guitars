@@ -27,7 +27,7 @@ class AddGuitarForm extends React.Component {
 				</select>
 				<textarea ref={(input) => this.desc = input } type="text" placeholder="Guitar Description"></textarea>
 				<input ref={(input) => this.image = input } type="text" placeholder="Guitar Image"/>
-				<button type="submit">Add Item +</button>
+				<button type="submit" className="btn">Add Item +</button>
 			</form>
 		)
 	}

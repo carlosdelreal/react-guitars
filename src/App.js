@@ -39,7 +39,7 @@ class App extends Component {
 			<div className="App wrapper">
 				<div className="row">
 					<Header />
-					<div className="guitar-selection column-4">
+					<div className="guitar-selection column-8">
 						<h2>Items</h2>
 						<ul className="guitars-list">
 							{
@@ -50,7 +50,9 @@ class App extends Component {
 					<div className="column-4">
 						<Order />
 					</div>
-					<div className="column-4">
+				</div>
+				<div className="row">
+					<div className="column-12">
 						<Inventory addGuitar={this.addGuitar} loadSamples={this.loadSamples} />
 					</div>
 				</div>

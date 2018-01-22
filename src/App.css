@@ -96,6 +96,9 @@ h1 {
   text-transform: uppercase;
   text-shadow: 1px 1px 0 #eeeedd, 2px 2px 0 #cacaca; }
 
+ul {
+  list-style: none; }
+
 .store-selector {
   background: white;
   max-width: 500px;
@@ -152,3 +155,6 @@ h1 {
   .btn:hover {
     background: #353535;
     color: white; }
+
+.guitar__img {
+  width: 100px; }

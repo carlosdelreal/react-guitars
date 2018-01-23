@@ -2,7 +2,7 @@ body {
 	color: $fontColor;
 	margin: 0;
 	padding: 0;
-	font-family: sans-serif;
+	font-family: 'Lato', sans-serif;
 }
 
 header {
@@ -25,16 +25,28 @@ input[type=submit] {
 		background: white;
 		border-color: red;
 		transform: rotate(-10deg) scale(2) translateX(50%) translateY(-50%);
+		&:hover,
+		input[type=submit][disabled]:hover {
+			color: #d12028;
+			cursor: not-allowed;
+			background: #fff;
+			border-color: #d12028;
+		}
 	}
 }
 
 h1 {
 	font-size: 4rem;
 	font-family: 'Oswald', 'Copperplate', sans-serif;
-	font-weight: normal;
+	// font-weight: normal;
 	text-align: center;
 	text-transform: uppercase;
 	text-shadow: 1px 1px 0 #eeeedd, 2px 2px 0 #cacaca;
+}
+
+p {
+	line-height: 1.5rem;
+	margin: 10px 0;
 }
 
 ul {

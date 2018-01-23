@@ -21,7 +21,7 @@ const guitars = {
 		"name": "Accoustic Flat Top",
 		"year": "1916",
 		"price": 1724,
-		"status": "available",
+		"status": "unavailable",
 		"category": "Accoustic",
 		"strings": "Steel",
 		"top": "Mahogany or Cedar",
@@ -44,7 +44,7 @@ const guitars = {
 		"back": "Rosewood, walnut, birch or pine",
 		"neck": "Mahogany or Cedar",
 		"fretboard": "Ebony or Rosewood",
-		"description": "Hollow-body also known as archtop guitars have been around since the turn of the century. However, it wasn't until the middle of the 1930s that the electric archtop appeared with the introduction of the Gibson ES-150. The instrument evolved from a simply rythmic role, to be showcased as a prominent soloing instrument in jazz.",
+		"description": " Archtop guitars also known as hollow-body have been around since the turn of the century. However, it wasn't until the middle of the 1930s that the electric archtop appeared with the introduction of the Gibson ES-150. The instrument evolved from a simply rythmic role, to be showcased as a prominent soloing instrument in jazz.",
 		"image": "guitar-3.jpg"
 	},
 

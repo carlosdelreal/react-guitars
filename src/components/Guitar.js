@@ -3,28 +3,29 @@ import { formatPrice } from "../helpers";
 
 class Guitar extends React.Component {
     render() {
-        const { details } = this.props;
+        const { details, index } = this.props;
+        const isAvailable = details.status === 'available';
+        const buttonText = isAvailable ? 'Add To Order' : 'Sold Out!';
         return (
             <li className="guitar">
                 <div className="wrapper">
-                    <row>
+                    <div className="row">
                         <div className="column-4">
                             <div className="guitar__img">
                                 <img src={`/images/guitar-${details.id}.jpg`} alt={this.props.details.name} />
                             </div>
-
-                            <button className="btn">Add To Order</button>
+                            <button onClick={() => this.props.addToOrder(index)} disabled={!isAvailable} className="btn">{buttonText}</button>
                         </div>
                         <div className="column-8">
                             <h3 className="guitar__name">
                                 {details.name}
                             </h3>
-                            <span className="guitar__price">
+                            <p className="guitar__price">
                                 {formatPrice(details.price)}
-                            </span>
+                            </p>
                             <p>{details.description}</p>
                         </div>
-                    </row>
+                    </div>
                 </div>
             </li>
         )

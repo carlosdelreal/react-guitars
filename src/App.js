@@ -11,6 +11,7 @@ class App extends Component {
 		super();
 		this.addGuitar = this.addGuitar.bind(this);
 		this.loadSamples = this.loadSamples.bind(this);
+		this.addToOrder = this.addToOrder.bind(this);
 		// getInitialState
 		this.state = {
 			guitars: {},
@@ -22,6 +23,15 @@ class App extends Component {
 		this.setState({
 			guitars
 		});
+	}
+
+	addToOrder(key) {
+		// take a copy of our state
+		const order = {...this.state.order};
+		// update or add the new number of guitars ordered
+		order[key] = order[key] + 1 || 1;
+		// update our state
+		this.setState({ order });
 	}
 
 	addGuitar(guitar) {
@@ -36,19 +46,19 @@ class App extends Component {
 
 	render() {
 		return (
-			<div className="App wrapper">
+			<div className="app wrapper">
 				<div className="row">
 					<Header />
 					<div className="guitar-selection column-8">
 						<h2>Items</h2>
 						<ul className="guitars-list">
 							{
-								Object.keys(this.state.guitars).map(key => <Guitar key={key} details={this.state.guitars[key]} />)
+								Object.keys(this.state.guitars).map(key => <Guitar key={key} index={key} details={this.state.guitars[key]} addToOrder={this.addToOrder} />)
 							}
 						</ul>
 					</div>
 					<div className="column-4">
-						<Order />
+						<Order guitars={this.state.guitars} order={this.state.order} />
 					</div>
 				</div>
 				<div className="row">

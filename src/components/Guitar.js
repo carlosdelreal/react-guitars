@@ -5,7 +5,7 @@ class Guitar extends React.Component {
     render() {
         const { details, index } = this.props;
         const isAvailable = details.status === 'available';
-        const buttonText = isAvailable ? 'Add To Order' : 'Sold Out!';
+        const buttonText = isAvailable ? 'Add To Order' : 'Sold!';
         return (
             <li className="guitar">
                 <div className="wrapper">

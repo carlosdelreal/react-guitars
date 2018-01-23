@@ -48,9 +48,12 @@ class App extends Component {
 		return (
 			<div className="app wrapper">
 				<div className="row">
-					<Header />
+					<Header tagline="Vintage &amp; Rare Guitars" />
+					<div className="row store-selector">
+						<button onClick={this.loadSamples} className="btn">View Guitars</button>
+					</div>
 					<div className="guitar-selection column-8">
-						<h2>Items</h2>
+						{/* <h2>Items</h2> */}
 						<ul className="guitars-list">
 							{
 								Object.keys(this.state.guitars).map(key => <Guitar key={key} index={key} details={this.state.guitars[key]} addToOrder={this.addToOrder} />)
@@ -59,11 +62,12 @@ class App extends Component {
 					</div>
 					<div className="column-4">
 						<Order guitars={this.state.guitars} order={this.state.order} />
+						{/* <Inventory addGuitar={this.addGuitar} loadSamples={this.loadSamples} /> */}
 					</div>
 				</div>
 				<div className="row">
 					<div className="column-12">
-						<Inventory addGuitar={this.addGuitar} loadSamples={this.loadSamples} />
+
 					</div>
 				</div>
 			</div>

@@ -4,9 +4,9 @@ import React from "react";
 const Header = (props) => {
 	// stateless functional component
 	return (
-		<header className="top">
-			<h1>Guitar Warehouse</h1>
-			<h2 className="tagline">{props.tagline}</h2>
+		<header className="header">
+			<a href="/" className="header__title"><h1>Guitar Warehouse</h1></a>
+			<h2 className="header__tagline">{props.tagline}</h2>
 			{/* <img src={logo} alt="Logo" /> */}
 		</header>
 	)

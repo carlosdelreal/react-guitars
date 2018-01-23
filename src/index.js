@@ -12,7 +12,7 @@ const Root = () => {
 	return (
 		<BrowserRouter>
 			<Switch>
-				<Route exact path='/' component={StorePicker} />
+				<Route exact path='/' component={App} />
 				<Route path='/guitars/' component={App} />
 				<Route component={NotFound} />
 			</Switch>

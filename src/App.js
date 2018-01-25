@@ -54,7 +54,7 @@ class App extends Component {
 			<div className="app wrapper" onLoad={this.loadSamples}>
 				<div className="row">
 					<Header tagline="Vintage &amp; Rare Guitars" />
-					<div className="guitar-selection column-8">
+					<div className="products column-8">
 						<h2>Items</h2>
 						<ul className="guitars-list">
 							{

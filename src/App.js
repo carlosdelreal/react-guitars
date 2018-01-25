@@ -20,23 +20,28 @@ class App extends Component {
 		};
 	}
 
-	loadSamples() {
-		this.setState({
-			guitars
-		});
-	}
-
-	componentDidMount() {
+	componentWillMount() {
+		// this runs right before <App /> is rendered
 		this.loadSamples();
+
+		// check if there is any order in localStorage
+		const localStorageRef = localStorage.getItem(`order-${this.props.match.url}`);
+
+		if (localStorageRef) {
+			// update App component's order state
+			this.setState({
+				order: JSON.parse(localStorageRef)
+			});
+		}
 	}
 
-	addToOrder(key) {
-		// take a copy of our state
-		const order = {...this.state.order};
-		// update or add the new number of guitars ordered
-		order[key] = order[key] + 1 || 1;
-		// update our state
-		this.setState({ order });
+	componentWillUpdate(nextProps, nextState) {
+		console.log(this.props.match.url);
+		localStorage.setItem(`order-${this.props.match.url}`, JSON.stringify(nextState.order));
+	}
+
+	loadSamples() {
+		this.setState({ guitars });
 	}
 
 	addGuitar(guitar) {
@@ -47,6 +52,18 @@ class App extends Component {
 		guitars[`guitar-${timestamp}`] = guitar;
 		// set state
 		this.setState({ guitars });
+	}
+
+	addToOrder(key) {
+		// take a copy of our state
+		const order = { ...this.state.order
+		};
+		// update or add the new number of guitars ordered
+		order[key] = order[key] + 1 || 1;
+		// update our state
+		this.setState({
+			order
+		});
 	}
 
 	render() {
@@ -64,8 +81,12 @@ class App extends Component {
 						</div>
 					</div>
 					<div className="column-4">
-						<Order guitars={this.state.guitars} order={this.state.order} />
-						{/* <Inventory addGuitar={this.addGuitar} loadSamples={this.loadSamples} /> */}
+						<Order
+							guitars={ this.state.guitars }
+							order={ this.state.order }
+							params = { this.props.match.url }
+						/>
+						<Inventory addGuitar={this.addGuitar} loadSamples={this.loadSamples} />
 					</div>
 				</div>
 				<div className="row">

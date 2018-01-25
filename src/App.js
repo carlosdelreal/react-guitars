@@ -12,7 +12,8 @@ class App extends Component {
 		this.addGuitar = this.addGuitar.bind(this);
 		this.loadSamples = this.loadSamples.bind(this);
 		this.addToOrder = this.addToOrder.bind(this);
-		// getInitialState
+
+		// getInitialState() in old react
 		this.state = {
 			guitars: {},
 			order: {}

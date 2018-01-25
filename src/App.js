@@ -25,6 +25,10 @@ class App extends Component {
 		});
 	}
 
+	componentDidMount() {
+		this.loadSamples();
+	}
+
 	addToOrder(key) {
 		// take a copy of our state
 		const order = {...this.state.order};
@@ -46,14 +50,11 @@ class App extends Component {
 
 	render() {
 		return (
-			<div className="app wrapper">
+			<div className="app wrapper" onLoad={this.loadSamples}>
 				<div className="row">
 					<Header tagline="Vintage &amp; Rare Guitars" />
-					<div className="row store-selector">
-						<button onClick={this.loadSamples} className="btn">View Guitars</button>
-					</div>
 					<div className="guitar-selection column-8">
-						{/* <h2>Items</h2> */}
+						<h2>Items</h2>
 						<ul className="guitars-list">
 							{
 								Object.keys(this.state.guitars).map(key => <Guitar key={key} index={key} details={this.state.guitars[key]} addToOrder={this.addToOrder} />)

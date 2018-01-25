@@ -18,7 +18,7 @@ class Order extends React.Component {
 
 		return (
 			<li key={key}>
-				<span>{count} {guitar.name}</span>
+				<span>{count} {guitar.name} </span>
 				<span className="price">{formatPrice(count * guitar.price)}</span>
 			</li>
 		)
@@ -41,7 +41,7 @@ class Order extends React.Component {
 				<ul className="order__list">
 					{orderIds.map(this.renderOrder)}
 					<li className="order__total">
-						{formatPrice(total)}
+						<span>Total: </span>{formatPrice(total)}
 					</li>
 				</ul>
 			</div>

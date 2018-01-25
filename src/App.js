@@ -54,13 +54,14 @@ class App extends Component {
 			<div className="app wrapper" onLoad={this.loadSamples}>
 				<div className="row">
 					<Header tagline="Vintage &amp; Rare Guitars" />
-					<div className="products column-8">
-						<h2>Items</h2>
-						<ul className="guitars-list">
-							{
-								Object.keys(this.state.guitars).map(key => <Guitar key={key} index={key} details={this.state.guitars[key]} addToOrder={this.addToOrder} />)
-							}
-						</ul>
+					<div className="column-8">
+						<div className="products">
+							<ul className="guitars-list">
+								{
+									Object.keys(this.state.guitars).map(key => <Guitar key={key} index={key} details={this.state.guitars[key]} addToOrder={this.addToOrder} />)
+								}
+							</ul>
+						</div>
 					</div>
 					<div className="column-4">
 						<Order guitars={this.state.guitars} order={this.state.order} />

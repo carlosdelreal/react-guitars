@@ -15,6 +15,8 @@ class App extends Component {
 		this.loadSamples = this.loadSamples.bind(this);
 		this.addToOrder = this.addToOrder.bind(this);
 		this.removeFromOrder = this.removeFromOrder.bind(this);
+		this.openModal = this.openModal.bind(this);
+		this.closeModal = this.closeModal.bind(this);
 
 		// getInitialState() in old react
 		this.state = {
@@ -92,12 +94,25 @@ class App extends Component {
 		this.setState({ order });
 	}
 
+	openModal() {
+		const modal = document.querySelector('.modal');
+		console.log(modal);
+		modal.classList.add('modal--is-visible');
+	}
+
+	closeModal() {
+		const modal = document.querySelector('.modal');
+		console.log(modal);
+		modal.classList.remove('modal--is-visible');
+	}
+
 	render() {
 		return (
 			<div className="app wrapper" onLoad={this.loadSamples}>
-				<div className="row">
+				<div className="row"><button onClick={this.openModal} className="btn--open-modal"><span role="img" aria-label="Guitar">🎸</span></button>
 					<Header tagline="Acoustic &amp; Electric Guitars" />
-					<div className="column-7">
+					<div className="column-8">
+
 						<div className="products">
 							<ul className="guitars-list">
 								{
@@ -106,21 +121,27 @@ class App extends Component {
 							</ul>
 						</div>
 					</div>
-					<div className="column-5">
+					<div className="column-4">
 						<Order
 							guitars={ this.state.guitars }
 							order={ this.state.order }
 							params = { this.props.match.url }
 							removeFromOrder={this.removeFromOrder }
 						/>
-						<Inventory
-							addGuitar={this.addGuitar}
-							loadSamples={this.loadSamples}
-							guitars={this.state.guitars}
-							updateGuitar={this.updateGuitar}
-							removeGuitar={this.removeGuitar}
-						/>
 					</div>
+				</div>
+
+				<div className="modal">
+
+					<button onClick={this.closeModal} className="btn--close-modal">&times;</button>
+
+					<Inventory
+						addGuitar={this.addGuitar}
+						loadSamples={this.loadSamples}
+						guitars={this.state.guitars}
+						updateGuitar={this.updateGuitar}
+						removeGuitar={this.removeGuitar}
+					/>
 				</div>
 			</div>
 		);

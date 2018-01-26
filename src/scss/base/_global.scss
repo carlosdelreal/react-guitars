@@ -24,7 +24,7 @@ input[type=submit] {
 		color: red;
 		background: white;
 		border-color: red;
-		transform: rotate(-10deg) scale(2) translateX(50%) translateY(-50%);
+		transform: rotate(-10deg) scale(1) translateX(0%) translateY(-50%);
 		&:hover,
 		input[type=submit][disabled]:hover {
 			color: #d12028;
@@ -32,7 +32,15 @@ input[type=submit] {
 			background: #fff;
 			border-color: #d12028;
 		}
+
+		@media #{$breakpoint-medium} {
+			transform: rotate(-10deg) scale(2) translateX(50%) translateY(-50%);
+		}
 	}
+}
+
+button {
+	cursor: pointer;
 }
 
 h1 {

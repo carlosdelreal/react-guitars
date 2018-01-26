@@ -1,9 +1,9 @@
 const guitars = {
 	"guitar1": {
 		"id": "1",
-		"name": "Classical Guitar",
+		"name": "Fender Classical Guitar",
 		"year": "1750",
-		"price": 1724,
+		"price": 29999,
 		"status": "available",
 		"category": "Accoustic",
 		"strings": "Nylon",
@@ -18,9 +18,10 @@ const guitars = {
 
 	"guitar2": {
 		"id": "2",
-		"name": "Accoustic Flat Top",
+		"name": "Guild Accoustic Flat Top",
 		"year": "1916",
-		"price": 1724,
+		"price": 91715
+,
 		"status": "unavailable",
 		"category": "Accoustic",
 		"strings": "Steel",
@@ -34,9 +35,9 @@ const guitars = {
 
 	"guitar3": {
 		"id": "3",
-		"name": "Archtop Electric",
+		"name": "SQUIER X-155 ARCHTOP",
 		"year": "1936",
-		"price": 1724,
+		"price": 45500,
 		"status": "available",
 		"category": "Electric",
 		"strings": "Steel Flatwounds",
@@ -50,9 +51,9 @@ const guitars = {
 
 	"guitar4": {
 		"id": "4",
-		"name": "Fender Stratocaster",
+		"name": "1963 Fender Stratocaster",
 		"year": "1954",
-		"price": 1724,
+		"price": 2300000,
 		"status": "available",
 		"category": "Electric",
 		"strings": "Steel",
@@ -66,9 +67,9 @@ const guitars = {
 
 	"guitar5": {
 		"id": "5",
-		"name": "Fender Telecaster",
+		"name": "1959 Fender Telecaster",
 		"year": "1950",
-		"price": 1724,
+		"price": 2487908,
 		"status": "available",
 		"category": "Electric",
 		"strings": "Steel",
@@ -82,9 +83,9 @@ const guitars = {
 
 	"guitar6": {
 		"id": "6",
-		"name": "Gibson Les Paul",
+		"name": "1985 Gibson Les Paul",
 		"year": "1952",
-		"price": 1724,
+		"price": 349500,
 		"status": "available",
 		"category": "Electric",
 		"strings": "Steel",
@@ -98,9 +99,9 @@ const guitars = {
 
 	"guitar7": {
 		"id": "7",
-		"name": "Gibson SG",
+		"name": "1972 Gibson SG",
 		"year": "1961",
-		"price": 1724,
+		"price": 175000,
 		"status": "available",
 		"category": "Electric",
 		"strings": "Steel",
@@ -114,9 +115,9 @@ const guitars = {
 
 	"guitar8": {
 		"id": "8",
-		"name": "Custom Electric",
+		"name": "Jackson X Series Warrior",
 		"year": "1980s",
-		"price": 1724,
+		"price": 64999,
 		"status": "unavailable",
 		"category": "Electric",
 		"strings": "Steel",

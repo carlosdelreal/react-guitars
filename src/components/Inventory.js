@@ -33,7 +33,7 @@ class Inventory extends React.Component {
 				</select>
 				<textarea type="text" name="desc" value={guitar.desc} placeholder="Guitar desc" onChange={(e) => this.handleChange(e, key)}></textarea>
 				<input type="text" name="image" value={guitar.image} placeholder="Guitar image" onChange={(e) => this.handleChange(e, key)} />
-				<button onClick={() => this.props.removeGuitar(key)} className="btn">Remove Item</button>
+				<button onClick={() => this.props.removeGuitar(key)} className="btn">Remove Item <span className="btn--remove-item">&times;</span></button>
 			</div>
 		);
 	}
@@ -42,6 +42,7 @@ class Inventory extends React.Component {
 		return (
 			<div className="inventory">
 				<h2>Inventory</h2>
+				<p><em>This overlay would be an admin panel to create, remove, update and delete items.</em></p>
 				<div className="inventory__items">
 					{Object.keys(this.props.guitars).map(this.renderInventory)}
 					<AddGuitarForm addGuitar={this.props.addGuitar} />

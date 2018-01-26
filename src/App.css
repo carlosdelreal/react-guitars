@@ -86,7 +86,7 @@ input[type=submit] {
     color: red;
     background: white;
     border-color: red;
-    transform: rotate(-10deg) scale(2) translateX(50%) translateY(-50%); }
+    transform: rotate(-10deg) scale(1) translateX(0%) translateY(-50%); }
     button[disabled]:hover,
     button[disabled] input[type=submit][disabled]:hover,
     input[type=submit][disabled]:hover,
@@ -95,6 +95,13 @@ input[type=submit] {
       cursor: not-allowed;
       background: #fff;
       border-color: #d12028; }
+    @media only screen and (min-width: 30em) {
+      button[disabled],
+      input[type=submit][disabled] {
+        transform: rotate(-10deg) scale(2) translateX(50%) translateY(-50%); } }
+
+button {
+  cursor: pointer; }
 
 h1 {
   font-size: 4rem;
@@ -111,7 +118,8 @@ ul {
   list-style: none; }
 
 .app {
-  height: 90vh; }
+  height: 90vh;
+  position: relative; }
 
 .header {
   margin-bottom: 20px; }
@@ -182,6 +190,18 @@ ul {
     color: white; }
   .btn--no-border {
     border: none; }
+  .btn--open-modal, .btn--close-modal {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #353535;
+    text-align: right;
+    text-transform: lowercase; }
+  .btn--open-modal {
+    font-size: 2rem; }
+  .btn--close-modal {
+    right: 30px;
+    font-size: 3rem; }
 
 .products {
   height: 70vh;
@@ -193,11 +213,9 @@ ul {
   margin: auto; }
 
 .inventory {
-  border: 1rem double #353535;
-  margin-top: 30px;
   padding: 1rem; }
   .inventory__items {
-    height: 40vh;
+    height: 100vh;
     margin-top: 20px;
     overflow: scroll;
     padding: 10px 5px; }
@@ -205,4 +223,22 @@ ul {
     min-height: 300px; }
 
 .order__total {
-  font-size: 1.2rem; }
+  font-size: 1.2rem;
+  margin: 10px 0; }
+
+.modal {
+  background-color: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.2);
+  transition: all .3s ease-out; }
+  .modal--is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1); }

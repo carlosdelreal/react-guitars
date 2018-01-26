@@ -11,13 +11,11 @@ class Order extends React.Component {
 	renderOrder(key) {
 		const guitar = this.props.guitars[key];
 		const count = this.props.order[key];
-		const removeBtn = <button onClick={() => this.props.removeFromOrder(key)}>&times;</button>;
+		const removeBtn = <button className="btn--remove-item" onClick={() => this.props.removeFromOrder(key)}>&times;</button>;
 
 		if (!guitar || guitar.status === 'unavailable') {
 			return (
-				<li key={key}>Sorry, {guitar ? guitar.name : 'this guitar'} is no longer available
-					{removeBtn}
-				</li>
+				<li key={key}>Sorry, {guitar ? guitar.name : 'this guitar'} is no longer available {removeBtn} </li>
 			)
 		}
 
@@ -43,12 +41,9 @@ class Order extends React.Component {
 		}, 0);
 		return (
 			<div className="order">
-				<h2>Your Order</h2>
+				<h2 className="order__total">Total: {formatPrice(total)}</h2>
 				<ul className="order__list">
 					{orderIds.map(this.renderOrder)}
-					<li className="order__total">
-						<p><strong>Total: {formatPrice(total)}</strong></p>
-					</li>
 				</ul>
 			</div>
 		)

@@ -11,15 +11,21 @@ class Order extends React.Component {
 	renderOrder(key) {
 		const guitar = this.props.guitars[key];
 		const count = this.props.order[key];
+		const removeBtn = <button onClick={() => this.props.removeFromOrder(key)}>&times;</button>;
 
 		if (!guitar || guitar.status === 'unavailable') {
-			return <li key={key}>Sorry, {guitar ? guitar.name : 'this guitar'} is no longer available</li>
+			return (
+				<li key={key}>Sorry, {guitar ? guitar.name : 'this guitar'} is no longer available
+					{removeBtn}
+				</li>
+			)
 		}
 
 		return (
 			<li key={key}>
 				<span>{count} {guitar.name} </span>
-				<span className="price">{formatPrice(count * guitar.price)}</span>
+				<span className="price" title="Remove Item">{formatPrice(count * guitar.price)} {removeBtn} </span>
+				{/* <button onClick={this.props.removeFromOrder(key)}>&times;</button> */}
 			</li>
 		)
 	}
@@ -41,7 +47,7 @@ class Order extends React.Component {
 				<ul className="order__list">
 					{orderIds.map(this.renderOrder)}
 					<li className="order__total">
-						<span>Total: </span>{formatPrice(total)}
+						<p><strong>Total: {formatPrice(total)}</strong></p>
 					</li>
 				</ul>
 			</div>

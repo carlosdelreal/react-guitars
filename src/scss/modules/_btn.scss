@@ -20,4 +20,8 @@
         background: $fontColor;
         color: white;
     }
+
+    &--no-border {
+        border: none;
+    }
 }

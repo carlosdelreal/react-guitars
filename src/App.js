@@ -11,8 +11,10 @@ class App extends Component {
 		super();
 		this.addGuitar = this.addGuitar.bind(this);
 		this.updateGuitar = this.updateGuitar.bind(this);
+		this.removeGuitar = this.removeGuitar.bind(this);
 		this.loadSamples = this.loadSamples.bind(this);
 		this.addToOrder = this.addToOrder.bind(this);
+		this.removeFromOrder = this.removeFromOrder.bind(this);
 
 		// getInitialState() in old react
 		this.state = {
@@ -37,7 +39,6 @@ class App extends Component {
 	}
 
 	componentWillUpdate(nextProps, nextState) {
-		console.log(this.props.match.url);
 		localStorage.setItem(`order-${this.props.match.url}`, JSON.stringify(nextState.order));
 	}
 
@@ -64,6 +65,16 @@ class App extends Component {
 		this.setState({ guitars });
 	}
 
+	removeGuitar(key) {
+		// take a copy of our guitars
+		const guitars = { ...this.state.guitars };
+		// guitars[key] = null;
+		// this.setState({ guitars });
+		delete guitars[key];
+		this.setState({ guitars });
+		console.log(guitars);
+	}
+
 	addToOrder(key) {
 		// take a copy of our state
 		const order = { ...this.state.order };
@@ -73,6 +84,12 @@ class App extends Component {
 		this.setState({
 			order
 		});
+	}
+
+	removeFromOrder(key) {
+		const order = {...this.state.order};
+		delete order[key];
+		this.setState({ order });
 	}
 
 	render() {
@@ -94,12 +111,14 @@ class App extends Component {
 							guitars={ this.state.guitars }
 							order={ this.state.order }
 							params = { this.props.match.url }
+							removeFromOrder={this.removeFromOrder }
 						/>
 						<Inventory
 							addGuitar={this.addGuitar}
 							loadSamples={this.loadSamples}
 							guitars={this.state.guitars}
 							updateGuitar={this.updateGuitar}
+							removeGuitar={this.removeGuitar}
 						/>
 					</div>
 				</div>

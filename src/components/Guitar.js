@@ -23,7 +23,7 @@ class Guitar extends React.Component {
                             <p className="guitar__price">
                                 {formatPrice(details.price)}
                             </p>
-                            <p>{details.description}</p>
+                            <p>{details.desc}</p>
                         </div>
                     </div>
                 </div>

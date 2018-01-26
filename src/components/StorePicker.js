@@ -11,9 +11,9 @@ class StorePicker extends React.Component {
 	render() {
 		return (
 			<div>
-				<Header tagline="Vintage &amp; Rare Guitars" />
+				<Header tagline="Acoustic &amp; Electric Guitars" />
 				<div className="store-selector">
-					<a href="/guitars" className="btn" >Visit Store →</a>
+					<a href="/store/" className="btn" >Visit Store →</a>
 				</div>
 			</div>
 		)

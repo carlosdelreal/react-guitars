@@ -31,7 +31,7 @@ class Inventory extends React.Component {
 					<option value="available">In stock</option>
 					<option value="unavailable">Sold!</option>
 				</select>
-				<textarea type="text" name="description" value={guitar.description} placeholder="Guitar description" onChange={(e) => this.handleChange(e, key)}></textarea>
+				<textarea type="text" name="desc" value={guitar.desc} placeholder="Guitar desc" onChange={(e) => this.handleChange(e, key)}></textarea>
 				<input type="text" name="image" value={guitar.image} placeholder="Guitar image" onChange={(e) => this.handleChange(e, key)} />
 				<button onClick={() => this.props.removeGuitar(key)} className="btn">Remove Item</button>
 			</div>
@@ -42,10 +42,12 @@ class Inventory extends React.Component {
 		return (
 			<div className="inventory">
 				<h2>Inventory</h2>
-				{Object.keys(this.props.guitars).map(this.renderInventory)}
-				<AddGuitarForm addGuitar={this.props.addGuitar} />
-				<div className="row store-selector">
-					{/* <button onClick={this.props.loadSamples} className="btn">Load Guitars</button> */}
+				<div className="inventory__items">
+					{Object.keys(this.props.guitars).map(this.renderInventory)}
+					<AddGuitarForm addGuitar={this.props.addGuitar} />
+					<div className="row store-selector">
+						{/* <button onClick={this.props.loadSamples} className="btn">Load Guitars</button> */}
+					</div>
 				</div>
 			</div>
 		)

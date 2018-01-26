@@ -96,8 +96,8 @@ class App extends Component {
 		return (
 			<div className="app wrapper" onLoad={this.loadSamples}>
 				<div className="row">
-					<Header tagline="Vintage &amp; Rare Guitars" />
-					<div className="column-8">
+					<Header tagline="Acoustic &amp; Electric Guitars" />
+					<div className="column-7">
 						<div className="products">
 							<ul className="guitars-list">
 								{
@@ -106,7 +106,7 @@ class App extends Component {
 							</ul>
 						</div>
 					</div>
-					<div className="column-4">
+					<div className="column-5">
 						<Order
 							guitars={ this.state.guitars }
 							order={ this.state.order }

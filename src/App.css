@@ -191,3 +191,18 @@ ul {
 .guitar__img {
   width: 100px;
   margin: auto; }
+
+.inventory {
+  border: 1rem double #353535;
+  margin-top: 30px;
+  padding: 1rem; }
+  .inventory__items {
+    height: 40vh;
+    margin-top: 20px;
+    overflow: scroll;
+    padding: 10px 5px; }
+  .inventory textarea {
+    min-height: 300px; }
+
+.order__total {
+  font-size: 1.2rem; }

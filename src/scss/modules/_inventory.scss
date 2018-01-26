@@ -1,0 +1,17 @@
+.inventory {
+    border: 1rem double $fontColor;
+    margin-top: 30px;
+    padding: 1rem;
+    &__items
+        {
+            // box-shadow: inset 0 0 10px #000000;
+            height: 40vh;
+            margin-top: 20px;
+            overflow: scroll;
+            padding: 10px 5px;
+    }
+
+    textarea {
+        min-height: 300px;
+    }
+}

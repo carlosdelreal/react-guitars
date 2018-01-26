@@ -42,8 +42,8 @@ class Inventory extends React.Component {
 		return (
 			<div className="inventory">
 				<h2>Inventory</h2>
-				<p><em>This overlay would be an admin panel to create, remove, update and delete items.</em></p>
 				<div className="inventory__items">
+					<p><em>This component would be an admin panel to create, remove, update and delete items.</em></p>
 					{Object.keys(this.props.guitars).map(this.renderInventory)}
 					<AddGuitarForm addGuitar={this.props.addGuitar} />
 					<div className="row store-selector">

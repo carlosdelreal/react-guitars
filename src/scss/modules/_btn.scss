@@ -31,8 +31,8 @@
 
 	&--open-modal, &--close-modal {
 		position: absolute;
-		right: 0;
-		top: 0;
+		right: 10px;
+		top: 10px;
 		color: $fontColor;
 		text-align: right;
 		text-transform: lowercase;

@@ -192,8 +192,8 @@ ul {
     border: none; }
   .btn--open-modal, .btn--close-modal {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 10px;
+    top: 10px;
     color: #353535;
     text-align: right;
     text-transform: lowercase; }

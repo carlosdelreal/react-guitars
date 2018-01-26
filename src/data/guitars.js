@@ -13,7 +13,7 @@ const guitars = {
 		"neck": "Mahogany or Cedar",
 		"fretboard": "Ebony or Rosewood",
 		"description": "The nylon-string is a type of accoustic guitar particularly used in classical music, flamenco, traditional latin folk music, and jazz. It's also been used more recently in pop music for its warm and mellow sound. ",
-		"image": "/static/media/images/guitar-1.jpg"
+		"image": "guitar-1.jpg"
 	},
 
 	"guitar2": {

@@ -10,6 +10,7 @@ class App extends Component {
 	constructor() {
 		super();
 		this.addGuitar = this.addGuitar.bind(this);
+		this.updateGuitar = this.updateGuitar.bind(this);
 		this.loadSamples = this.loadSamples.bind(this);
 		this.addToOrder = this.addToOrder.bind(this);
 
@@ -54,10 +55,18 @@ class App extends Component {
 		this.setState({ guitars });
 	}
 
+	updateGuitar(key, updatedGuitar) {
+		// take a copy of all of the guitars
+		const guitars = {...this.state.guitars};
+		// overwrite the updatedGuitar
+		guitars[key] = updatedGuitar;
+		// setState of the App
+		this.setState({ guitars });
+	}
+
 	addToOrder(key) {
 		// take a copy of our state
-		const order = { ...this.state.order
-		};
+		const order = { ...this.state.order };
 		// update or add the new number of guitars ordered
 		order[key] = order[key] + 1 || 1;
 		// update our state
@@ -86,12 +95,12 @@ class App extends Component {
 							order={ this.state.order }
 							params = { this.props.match.url }
 						/>
-						<Inventory addGuitar={this.addGuitar} loadSamples={this.loadSamples} />
-					</div>
-				</div>
-				<div className="row">
-					<div className="column-12">
-
+						<Inventory
+							addGuitar={this.addGuitar}
+							loadSamples={this.loadSamples}
+							guitars={this.state.guitars}
+							updateGuitar={this.updateGuitar}
+						/>
 					</div>
 				</div>
 			</div>

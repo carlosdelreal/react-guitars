@@ -1,6 +1,26 @@
-.order {
-    &__total {
-        font-size: 1.2rem;
-        margin: 10px 0;
-    }
-}
+// .order {
+//     &__total {
+//         font-size: 1.2rem;
+//         margin: 10px 0;
+//     }
+
+//     // React animations
+//     &-enter {
+//         background: red;
+//         transition: all 2.5s;
+//         transform: translateX(120%);
+//         &-active {
+//             background: yellow;
+//             transform: translateX(0);
+//         }
+//     }
+
+//     &-leave {
+//         transition: all 2.5s;
+//         transform: translateX(0);
+//         &-active {
+//             transform: translateX(120%);
+//         }
+//     }
+// }
+

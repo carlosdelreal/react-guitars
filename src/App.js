@@ -95,21 +95,20 @@ class App extends Component {
 	}
 
 	openModal() {
-		const modal = document.querySelector('.modal');
-		console.log(modal);
-		modal.classList.add('modal--is-visible');
+		this.modal.classList.add('modal--is-visible');
 	}
 
 	closeModal() {
-		const modal = document.querySelector('.modal');
-		console.log(modal);
-		modal.classList.remove('modal--is-visible');
+		this.modal.classList.remove('modal--is-visible');
 	}
 
 	render() {
 		return (
 			<div className="app wrapper" onLoad={this.loadSamples}>
-				<div className="row"><button onClick={this.openModal} className="btn--open-modal"><span role="img" aria-label="Guitar">🎸</span></button>
+				<div className="row">
+
+					<button onClick={this.openModal} className="btn--open-modal"><span role="img" aria-label="Guitar">🎸</span></button>
+
 					<Header tagline="Acoustic &amp; Electric Guitars" />
 					<div className="column-8">
 
@@ -126,12 +125,24 @@ class App extends Component {
 							guitars={ this.state.guitars }
 							order={ this.state.order }
 							params = { this.props.match.url }
-							removeFromOrder={this.removeFromOrder }
+							removeFromOrder={ this.removeFromOrder }
 						/>
 					</div>
 				</div>
 
-				<div className="modal">
+				{/* <button onClick={() => this.openModal()}>Open modal</button>
+				<Modal isOpen={this.state.isModalOpen} onClose={() => this.closeModal()}>
+					<Inventory
+						addGuitar={this.addGuitar}
+						loadSamples={this.loadSamples}
+						guitars={this.state.guitars}
+						updateGuitar={this.updateGuitar}
+						removeGuitar={this.removeGuitar}
+					/>
+					<p><button onClick={() => this.closeModal()}>Close</button></p>
+				</Modal> */}
+
+				<div className="modal" ref={modal => this.modal = modal}>
 
 					<button onClick={this.closeModal} className="btn--close-modal">&times;</button>
 

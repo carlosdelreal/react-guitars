@@ -1,5 +1,6 @@
 import React from "react";
 import { formatPrice } from "../helpers";
+import { CSSTransitionGroup } from 'react-transition-group';
 
 class Order extends React.Component {
 
@@ -21,9 +22,19 @@ class Order extends React.Component {
 
 		return (
 			<li key={key}>
-				<span>{count} {guitar.name} </span>
-				<span className="price" title="Remove Item">{formatPrice(count * guitar.price)} {removeBtn} </span>
-				{/* <button onClick={this.props.removeFromOrder(key)}>&times;</button> */}
+				<span>
+					<CSSTransitionGroup
+						component="span"
+						className="count"
+						transitionName="count"
+						transitionEnterTimeout={500}
+						transitionLeaveTimeout={500}
+					>
+						<span key={count}> {count} </span>
+					</CSSTransitionGroup>
+					<span className="test">{guitar.name} {removeBtn}</span>
+				</span>
+				{/* <span className="price">{formatPrice(count * guitar.price)}</span> */}
 			</li>
 		)
 	}
@@ -40,11 +51,17 @@ class Order extends React.Component {
 			return prevTotal;
 		}, 0);
 		return (
-			<div className="order">
+			<div className="">
 				<h2 className="order__total">Total: {formatPrice(total)}</h2>
-				<ul className="order__list">
+				<CSSTransitionGroup
+					className="order"
+					component="ul"
+					transitionName="order"
+					transitionEnterTimeout={500}
+					transitionLeaveTimeout={500}
+				>
 					{orderIds.map(this.renderOrder)}
-				</ul>
+				</CSSTransitionGroup>
 			</div>
 		)
 	}

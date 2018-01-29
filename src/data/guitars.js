@@ -5,7 +5,7 @@ const guitars = {
 		"year": "1750",
 		"price": 29999,
 		"status": "available",
-		"category": "Accoustic",
+		"category": "Acoustic",
 		"strings": "Nylon",
 		"pickups": "Amplified using piezo or under-saddle pickups.",
 		"top": "Mahogany or Cedar",
@@ -23,13 +23,13 @@ const guitars = {
 		"price": 91715
 ,
 		"status": "unavailable",
-		"category": "Accoustic",
+		"category": "Acoustic",
 		"strings": "Steel",
 		"top": "Mahogany or Cedar",
 		"back": "Rosewood, walnut, birch or pine",
 		"neck": "Mahogany or Cedar",
 		"fretboard": "Ebony or Rosewood",
-		"desc": "The steel-string accoustic guitar is a descendent of the Spanish guitar. It evolved from the traditional gut strings to steel to achieve more volume and sustain. Although it was initially used in traditional American folk and roots music, the steel-string guitar is the most used accoustic guitar in all types of genres like jazz, blues, rock, pop, country, and many more.",
+		"desc": "The steel-string acoustic guitar is a descendent of the Spanish guitar. It evolved from the traditional gut strings to steel to achieve more volume and sustain. Although it was initially used in traditional American folk and roots music, the steel-string guitar is the most used accoustic guitar in all types of genres like jazz, blues, rock, pop, country, and many more.",
 		"image": "guitar-2.jpg"
 	},
 

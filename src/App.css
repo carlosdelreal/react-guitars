@@ -140,11 +140,17 @@ ul {
   position: relative; }
 
 .count {
-  position: relative; }
+  width: 25px;
+  display: inline-block;
+  position: relative;
+  line-height: .7rem; }
+
+.count-number {
+  position: absolute;
+  left: 0;
+  bottom: 0; }
 
 .count-enter {
-  left: 0;
-  bottom: 0;
   transition: all .5s;
   transform: translateY(100%);
   opacity: 0; }
@@ -155,10 +161,7 @@ ul {
 
 .count-leave {
   transition: all .5s;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  transform: translateY() 0; }
+  transform: translateY(0); }
 
 .count-leave.count-leave-active {
   transform: translateY(-100%);
@@ -186,6 +189,8 @@ ul {
     .store-selector button[type="text"] {
       text-align: center;
       font-size: 2rem; }
+  .store-selector input {
+    visibility: hidden; }
 
 .guitar-edit {
   max-width: 500px;
@@ -266,7 +271,7 @@ ul {
     min-height: 300px; }
 
 .modal {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.7);
   position: fixed;
   top: 0;
   right: 0;

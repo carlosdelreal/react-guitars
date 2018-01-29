@@ -4,6 +4,7 @@ import Order from './components/Order';
 import Inventory from './components/Inventory';
 import Guitar from "./components/Guitar";
 import guitars from "./data/guitars";
+import PropTypes from "prop-types";
 
 class App extends Component {
 
@@ -130,18 +131,6 @@ class App extends Component {
 					</div>
 				</div>
 
-				{/* <button onClick={() => this.openModal()}>Open modal</button>
-				<Modal isOpen={this.state.isModalOpen} onClose={() => this.closeModal()}>
-					<Inventory
-						addGuitar={this.addGuitar}
-						loadSamples={this.loadSamples}
-						guitars={this.state.guitars}
-						updateGuitar={this.updateGuitar}
-						removeGuitar={this.removeGuitar}
-					/>
-					<p><button onClick={() => this.closeModal()}>Close</button></p>
-				</Modal> */}
-
 				<div className="modal" ref={modal => this.modal = modal}>
 
 					<button onClick={this.closeModal} className="btn--close-modal">&times;</button>
@@ -157,6 +146,10 @@ class App extends Component {
 			</div>
 		);
 	}
+}
+
+App.propTypes = {
+	params: PropTypes.object
 }
 
 export default App;

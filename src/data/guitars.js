@@ -51,9 +51,9 @@ const guitars = {
 
 	"guitar4": {
 		"id": "4",
-		"name": "1963 Fender Stratocaster",
+		"name": "Fender American '60s Strat",
 		"year": "1954",
-		"price": 2300000,
+		"price": 194999,
 		"status": "available",
 		"category": "Electric",
 		"strings": "Steel",
@@ -67,9 +67,9 @@ const guitars = {
 
 	"guitar5": {
 		"id": "5",
-		"name": "1959 Fender Telecaster",
+		"name": "Fender American '50s Tele",
 		"year": "1950",
-		"price": 2487908,
+		"price": 199999,
 		"status": "available",
 		"category": "Electric",
 		"strings": "Steel",
@@ -83,9 +83,9 @@ const guitars = {
 
 	"guitar6": {
 		"id": "6",
-		"name": "1985 Gibson Les Paul",
+		"name": "Gibson Les Paul Standard",
 		"year": "1952",
-		"price": 349500,
+		"price": 283000,
 		"status": "available",
 		"category": "Electric",
 		"strings": "Steel",
@@ -99,7 +99,7 @@ const guitars = {
 
 	"guitar7": {
 		"id": "7",
-		"name": "1972 Gibson SG",
+		"name": "Gibson SG",
 		"year": "1961",
 		"price": 175000,
 		"status": "available",

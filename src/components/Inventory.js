@@ -1,5 +1,6 @@
 import React from "react";
 import AddGuitarForm  from "./AddGuitarForm";
+import PropTypes from "prop-types";
 
 class Inventory extends React.Component {
 
@@ -47,12 +48,20 @@ class Inventory extends React.Component {
 					{Object.keys(this.props.guitars).map(this.renderInventory)}
 					<AddGuitarForm addGuitar={this.props.addGuitar} />
 					<div className="row store-selector">
-						{/* <button onClick={this.props.loadSamples} className="btn">Load Guitars</button> */}
+						<button onClick={this.props.loadSamples} className="btn">Load Guitars</button>
 					</div>
 				</div>
 			</div>
 		)
 	}
+}
+
+Inventory.propTypes = {
+	guitars: PropTypes.object.isRequired,
+	updateGuitar: PropTypes.func.isRequired,
+	removeGuitar: PropTypes.func.isRequired,
+	addGuitar: PropTypes.func.isRequired,
+	loadSamples: PropTypes.func.isRequired
 }
 
 export default Inventory;

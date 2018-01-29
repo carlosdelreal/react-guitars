@@ -1,5 +1,5 @@
 import React from "react";
-// import logo from '../images/logo.svg';
+import PropTypes from 'prop-types';
 
 const Header = (props) => {
 	// stateless functional component
@@ -7,9 +7,12 @@ const Header = (props) => {
 		<header className="header">
 			<a href="/" className="header__title"><h1>Guitar Warehouse</h1></a>
 			<h2 className="header__tagline">{props.tagline}</h2>
-			{/* <img src={logo} alt="Logo" /> */}
 		</header>
 	)
+}
+
+Header.propTypes = {
+	tagline: PropTypes.string
 }
 
 export default Header;

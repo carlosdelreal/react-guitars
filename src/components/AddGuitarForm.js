@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 class AddGuitarForm extends React.Component {
 
@@ -32,5 +33,9 @@ class AddGuitarForm extends React.Component {
 		)
 	}
 }
+
+AddGuitarForm.propTypes = {
+	addGuitar: PropTypes.func.isRequired
+};
 
 export default AddGuitarForm;

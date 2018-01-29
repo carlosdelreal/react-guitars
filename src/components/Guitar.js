@@ -1,5 +1,6 @@
 import React from "react";
 import { formatPrice } from "../helpers";
+import PropTypes from "prop-types";
 
 class Guitar extends React.Component {
     render() {
@@ -31,5 +32,11 @@ class Guitar extends React.Component {
         )
     }
 }
+
+Guitar.propTypes = {
+    details: PropTypes.object.isRequired,
+    index: PropTypes.string.isRequired,
+    addToOrder: PropTypes.func.isRequired
+};
 
 export default Guitar;

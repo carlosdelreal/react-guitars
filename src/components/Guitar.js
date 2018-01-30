@@ -14,7 +14,7 @@ class Guitar extends React.Component {
                     <div className="row">
                         <div className="column-4">
                             <div className="guitar__img">
-                                <img src={`${repo}/images/guitar-${details.id}.jpg`} alt={this.props.details.name} />
+                                <img src={details.image} alt={this.props.details.name} />
                             </div>
                             <button onClick={() => this.props.addToOrder(index)} disabled={!isAvailable} className="btn">{buttonText}</button>
                         </div>

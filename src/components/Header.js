@@ -6,7 +6,7 @@ const Header = (props) => {
 	// stateless functional component
 	return (
 		<header className="header">
-			<a href={repo} className="header__title"><h1>Guitar Warehouse</h1></a>
+			<h1><a href={repo} className="header__title">Guitar Warehouse</a></h1>
 			<h2 className="header__tagline">{props.tagline}</h2>
 		</header>
 	)

@@ -95,7 +95,7 @@ input[type=submit] {
       cursor: not-allowed;
       background: #fff;
       border-color: #d12028; }
-    @media only screen and (min-width: 30em) {
+    @media (min-width: 480px) {
       button[disabled],
       input[type=submit][disabled] {
         transform: rotate(-10deg) scale(2) translateX(50%) translateY(-50%); } }
@@ -104,11 +104,16 @@ button {
   cursor: pointer; }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: 'Oswald', 'Copperplate', sans-serif;
+  padding: 5px;
+  line-height: 3.5rem;
   text-align: center;
   text-transform: uppercase;
   text-shadow: 1px 1px 0 #eeeedd, 2px 2px 0 #cacaca; }
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 4rem; } }
 
 p {
   line-height: 1.5rem;
@@ -167,15 +172,18 @@ ul {
   transform: translateY(-100%);
   opacity: 0; }
 
-.header {
-  margin-bottom: 20px; }
-  .header__title {
-    color: #353535;
-    text-decoration: none; }
-  .header__tagline {
-    font-family: 'Baskerville', 'Garamond', 'Palatino', "Palatino Linotype", "Hoefler Text", "Times New Roman", serif;
-    font-style: italic;
-    font-weight: normal; }
+@media (min-width: 768px) {
+  .header {
+    margin-bottom: 20px; } }
+
+.header__title {
+  color: #353535;
+  text-decoration: none; }
+
+.header__tagline {
+  font-family: 'Baskerville', 'Garamond', 'Palatino', "Palatino Linotype", "Hoefler Text", "Times New Roman", serif;
+  font-style: italic;
+  font-weight: normal; }
 
 .store-selector {
   background: white;
@@ -252,9 +260,12 @@ ul {
     font-size: 3rem; }
 
 .products {
-  height: 70vh;
+  height: 60vh;
   overflow: scroll;
   border: 1rem double #353535; }
+  @media (min-width: 480px) {
+    .products {
+      height: 70vh; } }
 
 .guitar__img {
   width: 100px;

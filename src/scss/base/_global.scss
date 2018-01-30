@@ -33,7 +33,7 @@ input[type=submit] {
 			border-color: #d12028;
 		}
 
-		@media #{$breakpoint-medium} {
+		@include atSmall {
 			transform: rotate(-10deg) scale(2) translateX(50%) translateY(-50%);
 		}
 	}
@@ -44,12 +44,16 @@ button {
 }
 
 h1 {
-	font-size: 4rem;
+	font-size: 3rem;
 	font-family: 'Oswald', 'Copperplate', sans-serif;
-	// font-weight: normal;
+	padding: 5px;
+	line-height: 3.5rem;
 	text-align: center;
 	text-transform: uppercase;
 	text-shadow: 1px 1px 0 #eeeedd, 2px 2px 0 #cacaca;
+	@include atMedium {
+		font-size: 4rem;
+	}
 }
 
 p {

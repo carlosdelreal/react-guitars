@@ -1,5 +1,9 @@
 .products {
-	height: 70vh;
+	height: 60vh;
 	overflow: scroll;
 	border: 1rem double $fontColor;
+
+	@include atSmall {
+		height: 70vh;
+	}
 }

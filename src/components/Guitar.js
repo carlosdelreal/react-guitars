@@ -2,6 +2,7 @@ import React from "react";
 import { formatPrice } from "../helpers";
 import PropTypes from "prop-types";
 
+const repo = `/${window.location.pathname.split('/')[1]}`;
 class Guitar extends React.Component {
     render() {
         const { details, index } = this.props;
@@ -13,7 +14,7 @@ class Guitar extends React.Component {
                     <div className="row">
                         <div className="column-4">
                             <div className="guitar__img">
-                                <img src={`/images/guitar-${details.id}.jpg`} alt={this.props.details.name} />
+                                <img src={`${repo}/images/guitar-${details.id}.jpg`} alt={this.props.details.name} />
                             </div>
                             <button onClick={() => this.props.addToOrder(index)} disabled={!isAvailable} className="btn">{buttonText}</button>
                         </div>

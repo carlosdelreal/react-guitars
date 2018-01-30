@@ -2,7 +2,6 @@ import React from "react";
 import { formatPrice } from "../helpers";
 import PropTypes from "prop-types";
 
-const repo = `/${window.location.pathname.split('/')[1]}`;
 class Guitar extends React.Component {
     render() {
         const { details, index } = this.props;

@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "./Header";
 
 class NotFound extends React.Component {
 
@@ -10,12 +9,9 @@ class NotFound extends React.Component {
 
 	render() {
 		return (
-			<div>
-				<Header tagline="Vintage &amp; Rare Guitars" />
-				<div className="store-selector">
-					<p>The page you're looking for does not exist!</p>
-					<h2>¯\_(ツ)_/¯</h2>
-				</div>
+			<div className="store-selector">
+				<p>The page you're looking for does not exist!</p>
+				<h2>¯\_(ツ)_/¯</h2>
 			</div>
 		)
 	}

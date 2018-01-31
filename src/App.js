@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Header from './components/Header';
 import Order from './components/Order';
 import Inventory from './components/Inventory';
 import Guitar from "./components/Guitar";
@@ -109,8 +108,6 @@ class App extends Component {
 				<div className="row">
 
 					<button onClick={this.openModal} className="btn--open-modal"><span role="img" aria-label="Guitar">🎸</span></button>
-
-					<Header tagline="Acoustic &amp; Electric Guitars" />
 					<div className="column-8">
 
 						<div className="products">

@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "./Header";
 import { getFunName } from "../helpers";
 import PropTypes from "prop-types";
 
@@ -15,7 +14,6 @@ class StorePicker extends React.Component {
 	render() {
 		return (
 			<div>
-				<Header tagline="Acoustic &amp; Electric Guitars" />
 				{/* <div className="store-selector">
 					<a href="/store/" className="btn" >Visit Store →</a>
 				</div> */}

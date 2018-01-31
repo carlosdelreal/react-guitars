@@ -1,5 +1,7 @@
 .header {
-    @include atMedium {margin-bottom: 20px;}
+    @include atMedium {
+        margin: 20px 0;
+    }
     &__title {
         color: $fontColor;
         text-decoration: none;

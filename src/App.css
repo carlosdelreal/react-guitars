@@ -113,7 +113,8 @@ h1 {
   text-shadow: 1px 1px 0 #eeeedd, 2px 2px 0 #cacaca; }
   @media (min-width: 768px) {
     h1 {
-      font-size: 4rem; } }
+      font-size: 4rem;
+      line-height: initial; } }
 
 p {
   line-height: 1.5rem;

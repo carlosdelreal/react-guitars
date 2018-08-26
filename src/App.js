@@ -10,18 +10,20 @@ class App extends Component {
 	constructor() {
 		super();
 		this.addGuitar = this.addGuitar.bind(this);
-		this.updateGuitar = this.updateGuitar.bind(this);
-		this.removeGuitar = this.removeGuitar.bind(this);
-		this.loadSamples = this.loadSamples.bind(this);
-		this.addToOrder = this.addToOrder.bind(this);
-		this.removeFromOrder = this.removeFromOrder.bind(this);
 		this.openModal = this.openModal.bind(this);
 		this.closeModal = this.closeModal.bind(this);
+		this.addToOrder = this.addToOrder.bind(this);
+		this.loadSamples = this.loadSamples.bind(this);
+		this.updateGuitar = this.updateGuitar.bind(this);
+		this.removeGuitar = this.removeGuitar.bind(this);
+		this.updateGuitar = this.updateGuitar.bind(this);
+		this.removeGuitar = this.removeGuitar.bind(this);
+		this.removeFromOrder = this.removeFromOrder.bind(this);
 
 		// getInitialState() in old react
 		this.state = {
-			guitars: {},
-			order: {}
+			order: {},
+			guitars: {}
 		};
 	}
 
@@ -134,8 +136,8 @@ class App extends Component {
 
 					<Inventory
 						addGuitar={this.addGuitar}
-						loadSamples={this.loadSamples}
 						guitars={this.state.guitars}
+						loadSamples={this.loadSamples}
 						updateGuitar={this.updateGuitar}
 						removeGuitar={this.removeGuitar}
 					/>

@@ -3,8 +3,7 @@ import React from "react";
 class Modal extends React.Component {
 
 	render() {
-		if (this.props.isOpen === false)
-			return null
+		if (this.props.isOpen === false) return null
 
 		let modalStyle = {
 			position: 'absolute',
@@ -58,7 +57,7 @@ class Modal extends React.Component {
 	}
 
 	close(e) {
-		e.preventDefault()
+		e.preventDefault();
 
 		if (this.props.onClose) {
 			this.props.onClose()
